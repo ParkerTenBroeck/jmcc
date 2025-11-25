@@ -69,7 +69,6 @@ public class Elf<T extends Word> {
     public static ElfLoadKind load(Path path, ElfLoader loader) throws IOException, ElfException {
         try (var channel = FileChannel.open(path, StandardOpenOption.READ)) {
             var map = channel.map(FileChannel.MapMode.READ_ONLY, 0, channel.size());
-            System.out.println("Size: " + channel.size());
             Elf<?> elf = loader.load(map);
             return switch (elf.elf_class){
                 case ElfClass.S32 -> new Elf32((Elf<W32>) elf);

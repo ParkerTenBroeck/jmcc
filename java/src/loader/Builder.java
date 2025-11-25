@@ -25,8 +25,6 @@ public class Builder {
 
     private static final ClassDesc CD_Memory = ClassDesc.ofDescriptor(Memory.class.descriptorString());
 
-//    private static final MethodTypeDesc MD_
-
     private static final int CPU_SLOT = 1;
     private static final int MEMORY_SLOT = 2;
     private static final int PC_REGISTER_SLOT = 3;

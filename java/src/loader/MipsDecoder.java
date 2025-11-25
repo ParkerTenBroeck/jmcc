@@ -34,7 +34,8 @@ public class MipsDecoder {
         Sll,
         Srl,
         Sra,
-        Slt, Sltu,
+        Slt,
+        Sltu,
     }
 
     public enum MemoryKind {
